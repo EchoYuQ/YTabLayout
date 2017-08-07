@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:endColor="#0F000000"
+                android:startColor="#0F000000" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+
+
+    <!-- 上层的矩形背景 -->
+    <item
+        android:bottom="3dp"
+        android:left="3dp"
+        android:right="3dp"
+        android:top="3dp">
+        <shape>
+            <!-- 矩形的圆角弧度 -->
+            <corners android:radius="3dp" />
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="#17D692"
+                android:startColor="#16CD8C"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

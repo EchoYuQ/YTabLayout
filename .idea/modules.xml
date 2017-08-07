@@ -3,11 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/XTabLayout.iml" filepath="$PROJECT_DIR$/XTabLayout.iml" />
-      <module fileurl="file://$PROJECT_DIR$/XTabLayout-master.iml" filepath="$PROJECT_DIR$/XTabLayout-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YDTableLayout/YDTableLayout.iml" filepath="$PROJECT_DIR$/YDTableLayout/YDTableLayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/YTabLayout.iml" filepath="$PROJECT_DIR$/YTabLayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xtablayoutlibrary/xtablayoutlibrary.iml" filepath="$PROJECT_DIR$/xtablayoutlibrary/xtablayoutlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xtablayoutlibrary/xtablayoutlibrary.iml" filepath="$PROJECT_DIR$/xtablayoutlibrary/xtablayoutlibrary.iml" />
     </modules>
   </component>
 </project>

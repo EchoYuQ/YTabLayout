@@ -194,7 +194,7 @@ public class YDTabLayout extends HorizontalScrollView {
     private final int xTabSelectedBackgroundColor;
     private Drawable xTabSelectedBackground = null;
 
-    private int mTabMaxWidth = Integer.MAX_VALUE;
+    private int mTabMaxWidth = Integer.MAX_VALUE/2;
     private final int mRequestedTabMinWidth;
     private final int mRequestedTabMaxWidth;
     private int xTabDisplayNum;
@@ -205,10 +205,6 @@ public class YDTabLayout extends HorizontalScrollView {
     private int mTabGravity;
     private int mMode;
 
-    private int dividerWidth;
-    private int dividerHeight;
-    private int dividerColor;
-    private int dividerGravity;
 
     private YDTabLayout.OnTabSelectedListener mOnTabSelectedListener;
 
@@ -326,12 +322,12 @@ public class YDTabLayout extends HorizontalScrollView {
         mMode = a.getInt(R.styleable.YDTabLayout_xTabMode, MODE_FIXED);
         mTabGravity = a.getInt(R.styleable.YDTabLayout_xTabGravity, GRAVITY_FILL);
 
-        dividerWidth = a.getDimensionPixelSize(R.styleable.YDTabLayout_xTabDividerWidth, 0);
-        dividerHeight = a.getDimensionPixelSize(R.styleable.YDTabLayout_xTabDividerHeight, 0);
-        dividerColor = a.getColor(R.styleable.YDTabLayout_xTabDividerColor, Color.BLACK);
-        dividerGravity = a.getInteger(R.styleable.YDTabLayout_xTabDividerGravity, DividerDrawable.CENTER);
+//        dividerWidth = a.getDimensionPixelSize(R.styleable.YDTabLayout_xTabDividerWidth, 0);
+//        dividerHeight = a.getDimensionPixelSize(R.styleable.YDTabLayout_xTabDividerHeight, 0);
+//        dividerColor = a.getColor(R.styleable.YDTabLayout_xTabDividerColor, Color.BLACK);
+//        dividerGravity = a.getInteger(R.styleable.YDTabLayout_xTabDividerGravity, DividerDrawable.CENTER);
 
-        xTabDividerWidthWidthText = a.getBoolean(R.styleable.YDTabLayout_xTabDividerWidthWidthText, false);
+//        xTabDividerWidthWidthText = a.getBoolean(R.styleable.YDTabLayout_xTabDividerWidthWidthText, false);
 
         a.recycle();
 
@@ -344,59 +340,12 @@ public class YDTabLayout extends HorizontalScrollView {
         applyModeAndGravity();
 
         //添加分割线
-        addDivider();
+//        addDivider();
     }
 
-    /**
-     * 添加分割线
-     */
-    private void addDivider() {
-        post(new Runnable() {
-            @Override
-            public void run() {
-                if (dividerWidth > 0) {
-                    LinearLayout linearLayout = (LinearLayout) getChildAt(0);
-                    linearLayout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
-                    DividerDrawable dividerDrawable = new DividerDrawable(getContext());
-                    dividerDrawable.setDividerSize(dividerWidth, dividerHeight);
-                    dividerDrawable.setColor(dividerColor);
-                    dividerDrawable.setGravity(dividerGravity);
-                    linearLayout.setDividerDrawable(dividerDrawable);
-                }
-            }
-        });
-    }
 
-    /**
-     * 设置分割线长宽
-     *
-     * @param width
-     * @param height 当height =0 时，则分割线长度占满
-     */
-    public void setDividerSize(int width, int height) {
-        dividerWidth = width;
-        dividerHeight = height;
-        addDivider();
-    }
 
-    /**
-     * 设置分割线颜色
-     *
-     * @param color
-     */
-    public void setDividerColor(int color) {
-        dividerColor = color;
-        addDivider();
-    }
 
-    /**
-     * 设置分割线位置
-     */
-    public void setDividerGravity(int gravity) {
-        dividerGravity = gravity;
-        addDivider();
-
-    }
 
     /**
      * 设置字母是否自动小写转大写
@@ -1528,6 +1477,7 @@ public class YDTabLayout extends HorizontalScrollView {
                 if (xTabSelectedBackground != null) {
                     setBackground(xTabSelectedBackground);
                 }
+
                 sendAccessibilityEvent(AccessibilityEvent.TYPE_VIEW_SELECTED);
 
                 if (mTextView != null) {
@@ -1537,8 +1487,10 @@ public class YDTabLayout extends HorizontalScrollView {
                         mTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTabSelectedTextSize);
                         if (xTabTextSelectedBold) {
                             mTextView.setTypeface(Typeface.defaultFromStyle(Typeface.BOLD));
+                            Log.d("bold","设置了加粗");
                         } else {
                             mTextView.setTypeface(Typeface.defaultFromStyle(Typeface.NORMAL));
+                            Log.d("bold","没设置加粗");
                         }
                     }
                 }

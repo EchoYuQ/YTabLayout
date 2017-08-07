@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,28 +12,25 @@
         android:id="@+id/xTablayout"
         android:layout_width="match_parent"
         android:layout_height="130px"
-        app:xTabDividerWidthWidthText="true"
-        app:xTabMode="fixed"
+        app:xTabDisplayNum="3"
         app:xTabIndicatorColor="#0f0"
         app:xTabIndicatorHeight="0dp"
-        app:xTabSelectedTextColor="#ffffffff"
+        app:xTabMargin="5dp"
+        app:xTabMode="fixed"
+        app:xTabPadding="5dp"
+
+        app:xTabSelectedBackground="@drawable/item_bg_pressed"
         app:xTabSelectedBackgroundColor="#17D692"
-        app:xTabSelectedBackground="@drawable/btn_bg_pressed"
+        app:xTabSelectedTextColor="#ffffffff"
+        app:xTabSelectedTextSize="15sp"
         app:xTabTextColor="#848A90"
         app:xTabTextSize="15sp"
-        app:xTabDisplayNum="4"
-
-        app:xTabPadding="5dp"
-        app:xTabMargin="5dp"
-        app:xTabDividerWidth="0dp"
-        app:xTabDividerHeight="0dp"
-        app:xTabDividerColor="#000"
         app:xTabTextSelectedBold="true"
-        app:xTabTextBold="true"/>
+        />
 
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 </LinearLayout>

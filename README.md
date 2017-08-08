@@ -1,6 +1,6 @@
 # YDTabLayout——可自定义选中项和非选中项 背景、字体大小、颜色、Margin 的TabLayout
 ### YDTabLayout是基于design包中的TabLayout进行了功能的扩展，在保留原有功能的基础上，增加了可自定义选中项和非选中项 背景、字体大小、颜色、Margin、修改指示器长度以及限制屏幕显示范围内显示的Tab个数等功能。
-![image](https://gitlab.corp.youdao.com/luna-android-framework/ydtablayout/raw/master/screenshot/3.png)
+![image](https://raw.githubusercontent.com/EchoYuQ/YTabLayout/master/screenshot/3.png)
 ## 集成步骤：
 ### 1.添加YDTabLayout依赖库
 #### 在app目录下的build.gradle的dependencies中添加如下引用：
@@ -48,7 +48,7 @@
     app:xTabSelectedBackgroundColor="#ff0"
 
 ### 两个属性分别对应Tab未选中和被选中的背景色，效果图如下：
-![](https://gitlab.corp.youdao.com/luna-android-framework/ydtablayout/raw/master/screenshot/2.png)
+![](https://raw.githubusercontent.com/EchoYuQ/YTabLayout/master/screenshot/2.png)
 
 ### 2. 设置Tab背景
 
@@ -89,7 +89,7 @@
     tabLayout.setupWithViewPager(viewPager);
     
 #### 这里我们限制为3个，则每个tab的宽度为屏幕的1/3，显示效果如下:
- ![](https://gitlab.corp.youdao.com/luna-android-framework/ydtablayout/raw/master/screenshot/1.png)
+ ![](https://raw.githubusercontent.com/EchoYuQ/YTabLayout/master/screenshot/1.png)
 #### 需要注意显示的个数会受Adapter的ItemCount影响，例如ItemCount为3，但是我们设置app:xTabDisplayNum=“4”，那么显示出来的Tab的宽度其实是屏幕的1/3，并非1/4。
 
 ## 
